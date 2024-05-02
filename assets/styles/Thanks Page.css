@@ -56,7 +56,7 @@ h1 {
   letter-spacing: 2px;
   font-size: 5rem;
   color: #fefeff;
-  /* text-shadow: 1px -4px 0 rgb(10 10 10 / 25%); */
+  text-shadow: 1px -4px 0 rgb(10 10 10 / 25%);
   text-align: center;
   font-family: "font-bold", serif;
 }
