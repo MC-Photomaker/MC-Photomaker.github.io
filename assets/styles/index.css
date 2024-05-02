@@ -239,6 +239,10 @@ header h2 {
 .project-container {
   margin-top: 100px;
 }
+.project img:hover {
+  transform: scale(1.1);
+  filter: brightness(90%);
+}
 .project {
   position: relative;
   width: 60vw;
@@ -258,6 +262,9 @@ header h2 {
 }
 .project.is-inview::before {
   width: 0;
+}
+#p1 {
+  margin-left: 8vw;
 }
 #p2 {
   margin: 0 6vw 0 auto;
