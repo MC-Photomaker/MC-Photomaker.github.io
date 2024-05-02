@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "front-reg";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "font-bold";
+  src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+body {
+  background: url(./background.jpg) fixed no-repeat center/cover;
+  min-height: 100vh;
+}
+a {
+  margin: 5px;
+  font-family: "font-bold";
+}
+a,
+a:visited {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: #fefeff;
+  transition: 0.1s linear;
+  font-size: calc(0.8rem + 0.8vw);
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #fefeff;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  transform-origin: left;
+}
+a:hover {
+  transform: scale(1.04);
+  color: rgb(217, 217, 217);
+}
+a:hover::after {
+  animation: animLink 1.4s infinite ease-in-out;
+}
+@keyframes animLink {
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  letter-spacing: 2px;
+  font-size: 5rem;
+  color: #fefeff;
+  text-shadow: 1px -4px 0 rgb(10 10 10 / 25%);
+  text-align: center;
+  font-family: "font-bold", serif;
+}

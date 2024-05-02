@@ -1,0 +1,200 @@
+/* Paramètres généraux */
+/* @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap"); */
+@font-face {
+  font-family: "front-reg";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+  font-family: "font-bold";
+  src: url(../fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "font-med";
+  src: url(../fonts/SedgwickAveDisplay-Medium.ttf);
+}
+body {
+  background: url(./background.jpg) fixed no-repeat center/cover;
+  min-height: 100vh;
+}
+a {
+  margin: 5px;
+  font-family: "font-bold";
+}
+a,
+a:visited {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: #fefeff;
+  transition: 0.1s linear;
+  font-size: calc(0.8rem + 0.8vw);
+}
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: #fefeff;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  transform-origin: left;
+}
+a:hover {
+  transform: scale(1.04);
+  color: rgb(217, 217, 217);
+}
+a:hover::after {
+  animation: animLink 1.4s infinite ease-in-out;
+}
+@keyframes animLink {
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  letter-spacing: 2px;
+  font-size: 5rem;
+  color: #fefeff;
+  text-shadow: 1px -3px 0 rgb(10 10 10 / 25%);
+  text-align: center;
+  font-family: "font-med", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  font-family: "font-bold";
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.grid-container {
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  margin: 10px auto;
+  border: 2px solid rgba(0, 0, 0, 0.253);
+  border-radius: 10px;
+  box-shadow: -2px -2px 20px 0px #b6e9f1;
+  padding: 10px;
+  padding-bottom: 0;
+  display: block;
+}
+.grid-container img {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: block;
+}
+form {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "i1"
+    "i2"
+    "i3"
+    "ta"
+    "bt";
+}
+#firstname {
+  width: 40%;
+  max-height: 20px;
+  margin: 0;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-reg";
+  grid-area: i1;
+}
+#surname {
+  width: 40%;
+  max-height: 20px;
+  margin: 0;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-reg";
+  grid-area: i2;
+}
+#email {
+  width: 60%;
+  max-height: 20px;
+  margin: 0;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-reg";
+  grid-area: i3;
+}
+textarea {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-reg";
+  grid-area: ta;
+  height: 80px;
+  resize: none;
+  max-height: none;
+}
+#btn-submit {
+  width: 50%;
+  max-height: 50px;
+  margin: 0;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-family: "font-reg";
+  grid-area: bt;
+  cursor: pointer;
+  background: rgb(200, 230, 222);
+  transition: 0.4s;
+}
+#btn-submit:hover {
+  background: darkblue;
+  color: white;
+}
+@media screen and (max-width: 2600px) {
+  .grid-container {
+    display: block;
+  }
+}
+@media screen and (max-width: 520px) {
+  h1 {
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px -4px 0 rgb(10 10 10 / 25%);
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+}
+@media screen and (max-width: 335px) {
+  h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px -4px 0 rgb(10 10 10 / 25%);
+    text-align: center;
+    font-family: "Playfair Display", serif;
+  }
+  form {
+    max-width: 200px;
+  }
+}
