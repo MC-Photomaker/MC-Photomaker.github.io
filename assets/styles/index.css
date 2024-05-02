@@ -243,7 +243,8 @@ header h2 {
   position: relative;
   width: 60vw;
   min-width: 600px;
-  margin: 50px 5vw;
+  /* margin: 50px 5vw; */
+  padding: 20px;
 }
 .project::before {
   content: "";
